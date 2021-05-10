@@ -2,10 +2,25 @@
   --primery-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+  --primery-bgc: #fff;
+  --secondary-bgc: #f5f4fa;
+  --accent-bgc: #2f303a;
+  --accent-hover-color: #188ce8;
+  --web-color: #000;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-  background-color: #ffffff;
+  background-color: var(--primery-bgc);
   color: var(--primery-text-color);
 
   font-family: Roboto, sans-serif;
@@ -14,9 +29,41 @@ body {
   line-height: 1.71;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ============ Шапка сайта ========== */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* =========== Стилизация логотипа =========*/
+
 .logo {
-  color: #000000;
+  color: var(--web-color);
 
   font-family: Raleway, sans-serif;
   font-weight: bold;
@@ -27,15 +74,12 @@ body {
   color: var(--accent-color);
 }
 
-.list {
-  list-style: none;
-}
-
 /* ============== Стилизация панели навигации =====*/
 .navigation a,
 .contacts-nav a {
   text-decoration: none;
 }
+
 .nav-list .link {
   color: var(--title-text-color);
 
@@ -44,10 +88,12 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .nav-list .link:hover,
 .nav-list .link:focus {
   color: var(--accent-color);
 }
+
 .nav-list .link.current {
   color: var(--accent-color);
 }
@@ -60,6 +106,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+
 .contacts-nav .link:hover,
 .contacts-nav .link:focus {
   color: var(--accent-color);
@@ -68,10 +115,19 @@ body {
 /* =========== Hero =============*/
 
 .hero {
-  background-color: #2f303a;
+  outline: 2px solid greenyellow;
+  background-color: var(--accent-bgc);
 }
+
+.hero-container {
+  display: block;
+  text-align: center;
+}
+
 .hero-title {
-  color: #fff;
+  margin-bottom: 30px;
+
+  color: var(--primery-bgc);
 
   font-weight: 900;
   font-size: 44px;
@@ -81,7 +137,12 @@ body {
   text-transform: uppercase;
 }
 .main-button {
-  color: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  min-width: 200px;
+  padding: 10px 32px;
+
+  color: var(--primery-bgc);
   background-color: var(--accent-color);
 
   font-family: inherit;
@@ -92,11 +153,14 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 }
+
 .main-button:hover,
 .main-button:focus {
-  background-color: #188ce8;
+  background-color: var(--accent-hover-color);
 }
-/* Sections */
+
+/* ============= Sections =============*/
+
 .section-title {
   color: var(--title-text-color);
 
@@ -107,7 +171,10 @@ body {
 }
 
 /* ============= Advantages Section =========*/
+
 .advantages-list .title {
+  margin-bottom: 10px;
+
   color: var(--title-text-color);
 
   font-weight: bold;
@@ -116,11 +183,32 @@ body {
   text-transform: uppercase;
 }
 
+/* ========== Our works section ===========*/
+
+.ourwork-section {
+  padding-top: 0;
+}
+
+.ourwork-section .section-title {
+  margin-bottom: 50px;
+}
+
 /* ========== Our team section ===========*/
+
+.team-section .section-title {
+  margin-bottom: 50px;
+}
+
 .team-section {
-  background-color: #f5f4fa;
+  background-color: var(--secondary-bgc);
+}
+
+.team-image {
+  margin-bottom: 30px;
 }
 .team-list .title {
+  margin-bottom: 10px;
+
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -128,20 +216,28 @@ body {
   line-height: 1.18;
   text-align: center;
 }
+
 .team-list .text {
+  margin-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
+
 /* =========== Footer =========*/
+
 .footer {
-  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--accent-bgc);
 }
 .footer a {
   text-decoration: none;
 }
 .logo-light {
-  color: #fff;
+  color: var(--primery-bgc);
 
   font-family: Raleway, sans-serif;
   font-weight: bold;
@@ -149,7 +245,7 @@ body {
   line-height: 1.2;
 }
 .address {
-  color: #fff;
+  color: var(--primery-bgc);
 
   font-style: normal;
   font-size: 14px;
@@ -171,12 +267,14 @@ body {
 /* ============== Portfolio page =============*/
 
 /* ============ Our works section ==========*/
+
 .works-title {
   opacity: 0;
 }
+
 .button {
   color: var(--title-text-color);
-  background-color: #f5f4fa;
+  background-color: var(--secondary-bgc);
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -187,7 +285,7 @@ body {
 .button:hover,
 .button:focus,
 .button:active {
-  color: #fff;
+  color: var(--primery-bgc);
   background-color: var(--accent-color);
 }
 
