@@ -63,6 +63,8 @@ p {
 /* =========== Стилизация логотипа =========*/
 
 .logo {
+  margin-right: 93px;
+
   color: var(--web-color);
 
   font-family: Raleway, sans-serif;
@@ -75,12 +77,31 @@ p {
 }
 
 /* ============== Стилизация панели навигации =====*/
+
 .navigation a,
 .contacts-nav a {
   text-decoration: none;
 }
 
+.nav-list {
+  display: flex;
+}
+
+.nav-list .item + .item {
+  margin-left: 50px;
+}
+/* .nav-list .item {
+  margin-right: 50px;
+} */
+/* .nav-list .item:last-child {
+  margin-right: 0;
+} */
+
 .nav-list .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
 
   font-weight: 500;
@@ -98,6 +119,14 @@ p {
   color: var(--accent-color);
 }
 
+.contacts-nav {
+  display: flex;
+}
+
+.contacts-nav .item + .item {
+  margin-left: 50px;
+}
+
 .contacts-nav .link {
   color: var(--primery-text-color);
 
@@ -112,10 +141,16 @@ p {
   color: var(--accent-color);
 }
 
+.header-container,
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 /* =========== Hero =============*/
 
 .hero {
-  outline: 2px solid greenyellow;
   background-color: var(--accent-bgc);
 }
 
@@ -183,6 +218,17 @@ p {
   text-transform: uppercase;
 }
 
+.advantages-list {
+  display: flex;
+}
+
+.advantages-item {
+  margin-right: 30px;
+  width: 270px;
+}
+.advantages-item:last-child {
+  margin-right: 0;
+}
 /* ========== Our works section ===========*/
 
 .ourwork-section {
