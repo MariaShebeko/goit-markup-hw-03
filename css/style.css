@@ -40,13 +40,15 @@ p {
   margin-bottom: 0;
 }
 
+img {
+  display: block;
+}
+
 .list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-
-/* ============ Шапка сайта ========== */
 
 .container {
   width: 1200px;
@@ -58,6 +60,12 @@ p {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+
+/* ============ Шапка сайта ========== */
+
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
 
 /* =========== Стилизация логотипа =========*/
@@ -207,6 +215,10 @@ p {
 
 /* ============= Advantages Section =========*/
 
+.advantages-section {
+  padding-bottom: 47px;
+}
+
 .advantages-list .title {
   margin-bottom: 10px;
 
@@ -229,10 +241,19 @@ p {
 .advantages-item:last-child {
   margin-right: 0;
 }
+
 /* ========== Our works section ===========*/
 
+.work-list {
+  display: flex;
+}
+
+.work-item + .work-item {
+  margin-left: 30px;
+}
+
 .ourwork-section {
-  padding-top: 0;
+  padding-top: 47px;
 }
 
 .ourwork-section .section-title {
@@ -249,9 +270,17 @@ p {
   background-color: var(--secondary-bgc);
 }
 
+.team-list {
+  display: flex;
+}
+
+.team-item + .team-item {
+  margin-left: 30px;
+}
 .team-image {
   margin-bottom: 30px;
 }
+
 .team-list .title {
   margin-bottom: 10px;
 
@@ -283,6 +312,9 @@ p {
   text-decoration: none;
 }
 .logo-light {
+  display: block;
+  width: 145px;
+  margin-bottom: 20px;
   color: var(--primery-bgc);
 
   font-family: Raleway, sans-serif;
@@ -290,6 +322,14 @@ p {
   font-size: 26px;
   line-height: 1.2;
 }
+
+.footer-item {
+  margin-bottom: 9px;
+}
+.footer-item:last-child {
+  margin-bottom: 0;
+}
+
 .address {
   color: var(--primery-bgc);
 
@@ -312,13 +352,28 @@ p {
 
 /* ============== Portfolio page =============*/
 
-/* ============ Our works section ==========*/
+/* ============ Buttons (filtr) section ==========*/
+.buttons-container {
+  width: 611px;
+  margin: 0 auto 34px;
+}
 
 .works-title {
-  opacity: 0;
+  display: none;
+}
+
+.buttons-list {
+  display: flex;
+}
+.button-item + .button-item {
+  margin-left: 8px;
 }
 
 .button {
+  padding: 6px 22px;
+  border: 0;
+  border-radius: 4px;
+
   color: var(--title-text-color);
   background-color: var(--secondary-bgc);
   font-family: inherit;
@@ -336,6 +391,26 @@ p {
 }
 
 /* ============ Galery section ============*/
+.work-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-items .item {
+  width: 370px;
+}
+
+.work-items .item:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+.work-items .item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.item-description {
+  padding: 20px 24px;
+}
+
 .work-items .title {
   color: var(--title-text-color);
 
