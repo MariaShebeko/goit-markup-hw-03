@@ -129,6 +129,7 @@ img {
 
 .contacts-nav {
   display: flex;
+  margin-left: auto;
 }
 
 .contacts-nav .item + .item {
@@ -153,7 +154,6 @@ img {
 .navigation {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* =========== Hero =============*/
@@ -238,13 +238,12 @@ img {
 }
 
 .advantages-item {
-  margin-right: 30px;
   width: 270px;
 }
-.advantages-item:last-child {
-  margin-right: 0;
-}
 
+.advantages-item:not(:last-child) {
+  margin-right: 30px;
+}
 /* ========== Our works section ===========*/
 
 .work-list {
@@ -273,21 +272,23 @@ img {
   background-color: var(--secondary-bgc);
 }
 
-.team-item-container {
+.team-list {
+  display: flex;
+}
+
+.team-item + .team-item {
+  margin-left: 30px;
+}
+
+.team-item {
   background-color: var(--primery-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-item-container + .team-item-container {
-  margin-left: 30px;
-}
-.team-list {
-  display: flex;
-}
-
-.team-image {
+.team-item-description {
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -303,8 +304,6 @@ img {
 }
 
 .team-list .text {
-  margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
@@ -323,7 +322,6 @@ img {
 }
 .logo-light {
   display: block;
-  width: 145px;
   margin-bottom: 20px;
   color: var(--primery-bgc);
 
